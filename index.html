@@ -8,10 +8,13 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&family=Hammersmith+One&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&family=Hammersmith+One&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
+    <div class="chat-bubble"><img src="ressources/bubble.svg" alt="Bulle de chat"></div>
     <nav>
         <div>
             <ul>
@@ -23,17 +26,77 @@
         <img src="ressources/logo.svg" alt="Logo O'Clock">
         <div>
             <ul>
-                <li>La team</li>
+                <li><span class="recruitment"></span>La team</li>
                 <li>Le blog</li>
-                <li>Espace entreprises</li>
+                <li>Espace entreprises <span class="down-arrow"></span></li>
             </ul>
             <button>Je m'inscris</button>
 
         </div>
     </nav>
     <main>
-        <section>
-    
+        <header>
+            <div class="container">
+                <img src="ressources/biglogo.svg" alt="Logo Ecole O'Clock">
+                <p>Embarquez dans nos salles de classe virtuelles pour apprendre le métier de développeur, entouré de
+                    vos camarades de promotion et de vos formateurs.</p>
+                <p>Un seul objectif : faire de vous un développeur web compétent, diplômé et recruté !</p>
+
+                <ul class="container-card">
+                    <li class="card">
+                        <!-- <img src="ressources/videoconf.svg" alt="Logo vidéoconférence"> -->
+                        <div class="logo videoconf"></div>
+                        <h1>Des cours en direct</h1>
+                        <p>animés chaque jour en téléprésentiel</p>
+                    </li>
+                    <li class="card">
+                        <div class="logo heart"></div>
+                        <h1>Des profs dévoués</h1>
+                        <p>aux petits soins et à temps plein</p>
+                    </li>
+                    <li class="card">
+                        <div class="logo fan"></div>
+                        <h1>Une communauté</h1>
+                        <p>d’étudiants réactive et soudée</p>
+                    </li>
+                    <li class="card">
+                        <div class="logo boxe"></div>
+                        <h1>Un coaching actif</h1>
+                        <p>pour trouver un emploi de développeur</p>
+                    </li>
+                </ul>
+
+            </div>
+        </header>
+        <section class="section-einstein">
+            <div class="container-section">
+                <img src="ressources/fish.svg" alt="Poisson">
+                <figure>
+                    <blockquote>
+                        <p> Tout le monde est un génie. Mais si vous jugez un poisson sur ses capacités à grimper à un arbre, il passera sa vie à croire qu’il est stupide. </p>
+                    </blockquote>
+                    <figcaption>Albert Einstein</figcaption>
+                </figure>
+            </div>
+        </section>
+        <section class="section-method">
+            <div class="newschool-newmethod">
+                <div>
+                    <h1>Nouvelle école,</h1>
+                    <h1>Nouvelle méthode</h1>
+                </div>
+
+                <div>
+                    <p>Depuis chez soi, on se plonge dans les cours en direct-vidéo, animés chaque jour par nos formateurs. Une salle de classe vivante où les élèves apprennent ensemble le métier de développeur.</p>
+                    <p>Après les cours, les étudiants pourront aiguiser leurs compétences à coups de révisions et de challenges, en autonomie comme en groupe. Ils s’entraînent, s’entraident et sont encadrés constamment et en temps réel par une équipe pédagogique expérimentée.</p>
+                    <p>On appelle ça le téléprésentiel : l’accompagnement humain allié au confort de l’apprentissage à la maison… et en chaussons !</p>
+                </div>
+
+                <div>
+                    <button><span>&#8594;</span><span>La méthode dans le détail</span></button>
+                </div>
+            </div>
+            <div class="course-example"><p>en attente d'intégration</p></div>
         </section>
 
     </main>

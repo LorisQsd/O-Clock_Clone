@@ -7,16 +7,48 @@
 }
 
 /*GENERAL*/
-body{
+body {
     font-family: 'Gothic A1', sans-serif;
     color: #fffdd8;
 }
-h1, h2, h3, h4, h5, h6{
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Hammersmith One', sans-serif;
 }
+
 ul {
     list-style-type: none;
     display: flex;
+}
+
+/*CHAT BUBBLE*/
+.chat-bubble {
+    display: flex;
+    padding-left: 15px;
+    align-items: center;
+    position: fixed;
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 50px;
+    border-radius: 50px 0 0 50px;
+    box-shadow: 0px 3px 0px #cccccc;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: all 200ms;
+}
+.chat-bubble img {
+    width: 40%;
+}
+
+.chat-bubble:hover {
+    transform: translate(-10px, -50%)
 }
 /*NAV*/
 nav {
@@ -34,11 +66,13 @@ nav {
 nav img {
     width: 50px;
 }
+
 nav ul {
     gap: 5px;
     font-family: 'Hammersmith One', sans-serif;
     height: 100%;
 }
+
 nav ul li {
     height: 100%;
     display: flex;
@@ -51,6 +85,7 @@ nav ul li {
     cursor: pointer;
     transition: all 300ms;
 }
+
 nav button {
     padding: 10px 30px;
     border-radius: 20px;
@@ -73,6 +108,7 @@ nav img {
     cursor: pointer;
     margin-left: 150px;
 }
+
 nav div {
     display: flex;
     align-items: center;
@@ -89,8 +125,241 @@ nav ul li:hover {
     display: flex;
     align-items: center;
 }
-/*SECTION 1*/
-section {
+
+.recruitment {
+    position: relative;
+    transition: all 300ms;
+    opacity: 0;
+}
+
+.recruitment::before {
+    content: "On recrute !";
+    background: #fffdd8;
+    width: 85px;
+    color: #43b6dd;
+    padding: 3px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    right: -10px;
+    bottom: -10px;
+}
+
+.recruitment::after {
+    content: '';
+    display: inline-block;
+    height: 0;
+    width: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid #fffdd8;
+    position: absolute;
+    left: 12px;
+    bottom: -5px;
+}
+
+.down-arrow {
+    margin-left: 5px;
+    display: inline-block;
+    height: 0;
+    width: 0;
+    border-top: 10px solid #fffdd8;
+    border-right: 6px solid transparent;
+    border-left: 4px solid transparent;
+}
+
+/*HEADER*/
+header {
     height: 100vh;
     background: #0ac3a7;
+    padding-top: 150px;
+    text-align: center;
+    font-size: 28px;
+}
+header p::selection,
+header h1::selection {
+    color: #0ac3a7;
+    background: #fffdd8;
+}
+.container {
+    display: block;
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: 10px;
+}
+
+.container p{
+    line-height: 160%;
+}
+
+.container > img {
+    margin-bottom: 50px;
+}
+
+.container-card {
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 75px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 60px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #0cad93;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 10px;
+}
+.videoconf {
+    background-image: url("ressources/videoconf.svg");
+}
+.heart {
+    background-image: url("ressources/heart.svg");
+}
+.fan {
+    background-image: url("ressources/fan.svg");
+}
+.boxe {
+    background-image: url("ressources/glove.svg");
+}
+
+.card h1 {
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.card p {
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 200%;
+}
+.card img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+/*SECTION EINSTEIN*/
+section {
+    height: 100vh;
+}
+.section-einstein {
+    background: #234b78;
+}
+.section-einstein p::selection, .section-einstein figcaption::selection{
+    color: #234b78;
+    background: #fffdd8;
+}
+.container-section {
+    height: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.container-section img {
+    width: 170px;
+}
+section blockquote p {
+    font-family: "Gothic A1", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 75px 40px 30px 40px;
+    line-height: 180%;
+}
+section blockquote p::before{
+    content:"\0000AB";
+}
+section blockquote p::after {
+    content:"\0000BB";
+}
+section figcaption {
+    font-family: "Hammersmith One", sans-serif;
+    text-align: end;
+    letter-spacing: 4px;
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+/*SECTION METHOD*/
+.section-method {
+    background: #d83a37;
+    display: flex;
+}
+
+.section-method > div {
+    width: 50%;
+}
+.newschool-newmethod{
+    border: 2px solid green;
+    padding-left: clamp(50px, 5vw, 100px); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+}
+
+.newschool-newmethod h1 {
+    font-size: 60px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 100%;
+}
+
+.newschool-newmethod p {
+    font-family: 'Hammersmith One';
+    font-size: 18px;
+    margin: 25px 0;
+    line-height: 180%;
+}
+
+.newschool-newmethod button {
+    font-family: "Hammersmith One", sans-serif;
+    width: 350px;
+    padding: 20px 25px;
+    background: #fffdd8;
+    border-radius: 50px;
+    font-size: 18px;
+    color: #d83a37;
+    border-style: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transform: scale(1.1, 1);
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.newschool-newmethod button span {
+    transition: all 300ms;
+}
+
+.newschool-newmethod button span:first-child {
+    position: absolute;
+    opacity: 0;
+    margin-right: 15px;
+    transform: translateX(-50px);
+}
+
+/*En attente d'intégration*/
+.course-example {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
