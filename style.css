@@ -307,8 +307,12 @@ section figcaption {
 .section-method > div {
     width: 50%;
 }
+
+.section-method h1::selection, .section-method p::selection {
+    color: #d83a37;
+    background: #fffdd8;
+}
 .newschool-newmethod{
-    border: 2px solid green;
     padding-left: clamp(50px, 5vw, 100px); 
     display: flex;
     flex-direction: column;
@@ -316,41 +320,44 @@ section figcaption {
     gap: 25px;
 }
 
-.newschool-newmethod h1 {
+.section-method .presentation:first-child button {
+    color: #d83a37;
+}
+/*PRESENTATION*/
+.presentation h1 {
     font-size: 60px;
     text-transform: uppercase;
     letter-spacing: 2px;
     line-height: 100%;
 }
 
-.newschool-newmethod p {
+.presentation p {
     font-family: 'Hammersmith One';
     font-size: 18px;
     margin: 25px 0;
     line-height: 180%;
 }
 
-.newschool-newmethod button {
+.presentation button {
     font-family: "Hammersmith One", sans-serif;
     width: 350px;
     padding: 20px 25px;
     background: #fffdd8;
     border-radius: 50px;
     font-size: 18px;
-    color: #d83a37;
     border-style: none;
     text-transform: uppercase;
     letter-spacing: 1px;
-    transform: scale(1.1, 1);
     margin-left: 20px;
     cursor: pointer;
 }
 
-.newschool-newmethod button span {
+
+.presentation button span {
     transition: all 300ms;
 }
 
-.newschool-newmethod button span:first-child {
+.presentation button span:first-child {
     position: absolute;
     opacity: 0;
     margin-right: 15px;
@@ -362,4 +369,150 @@ section figcaption {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/*SECTION FORMATIONS*/
+.section-formations {
+    background: #ffb400;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 100px;
+}
+
+.section-formations > div {
+    width: 50%;
+}
+
+.section-formations h1::selection, .section-formations p::selection {
+    color: #ffb400;
+    background: #fffdd8;
+}
+.formations{
+    padding-left: clamp(50px, 5vw, 100px); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+}
+
+.section-formations .presentation:last-child button {
+    color: #ffb400;
+}
+
+/*COOKING*/
+.cooking {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 125px;
+    align-items: center;
+    position: relative;
+}
+.cooking div img {
+    width: 75px;
+}
+.cooking > img:first-child {
+    width: 600px;
+}
+.languages {
+    display: flex;
+}
+.languages img[data-logo="CSS3"]{
+    animation: 1.5s ease-in-out infinite alternate;
+    animation-name: CSS3;
+}
+.languages img[data-logo="HTML5"]{
+    animation: 3.5s ease-in-out infinite alternate;
+    animation-name: HTML5;
+}
+.languages img[data-logo="React"]{
+    animation: 2s ease-in-out infinite alternate;
+    animation-name: React;
+}
+.languages img[data-logo="js"]{
+    animation: 2.5s ease-in-out infinite alternate;
+    animation-name: js;
+}
+.languages img[data-logo="PHP"]{
+    
+    animation: 1.5s ease-in-out infinite alternate;
+    animation-name: PHP;
+}
+.languages img[data-logo="symfony"]{
+    animation: 2s ease-in-out infinite alternate;
+    animation-name: symfo;
+}
+
+/*ANIMATIONS COOKING*/
+.casserole {
+    animation: 3s ease-in-out infinite alternate;
+    animation-name: casseroleAnimation;
+}
+
+@keyframes casseroleAnimation {
+    from{
+        transform: rotate(-10deg) translateX(0px);
+    }
+    to {
+        transform: rotate(0deg) translateX(-10px);
+    }
+}
+
+@keyframes CSS3 {
+    from{
+        transform: rotate(0deg) translate(170px, -450px);
+    }
+    to {
+        transform: rotate(15deg) translate(70px, -450px)
+    }
+}
+
+@keyframes HTML5 {
+    from{
+        transform: rotate(0deg) translate(286px, -240px);
+    }
+    to {
+        transform: rotate(-5deg) translate(290px, -180px)
+    }
+}
+
+@keyframes React {
+    from{
+        transform: rotate(0deg) translate(268px, -382px);
+    }
+    to {
+        transform: rotate(30deg) translate(50px, -420px)
+    }
+}
+
+@keyframes js {
+    from{
+        transform: rotate(10deg) translate(-180px, -287px);
+    }
+    to {
+        transform: rotate(20deg) translate(-250px, -300px)
+    }
+}
+
+@keyframes symfo {
+    from{
+        transform: rotate(-30deg) translate(-76px, -287px);
+    }
+    to {
+        transform: rotate(0deg) translate(-200px, -300px);
+    }
+}
+
+@keyframes PHP {
+    from{
+        transform: rotate(0deg) translate(0px, -304px);
+    }
+    to {
+        transform: rotate(30deg) translate(-180px, -304px);
+    }
+}
+
+/*SECTION NEEDS*/
+.section-needs {
+    background: #5e9d07;
 }
